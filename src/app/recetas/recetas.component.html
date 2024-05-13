@@ -1,0 +1,14 @@
+
+
+    <p class="texto">{{this.nombreReceta}}</p>
+    <p class="subtitulo">Tiempo : {{this.tiempoReceta}} Minutos</p>
+
+    <div class="receta">
+        <div class="imagen_receta">
+            <img src="{{this.fotoReceta}}" alt="foto_receta">
+        </div>
+        <div class="instrucciones" [innerHTML]="this.intruccionesReceta"></div>
+        <button class="boton" (click)="cambiarReceta()">Cambiar receta</button>
+    </div>
+    
+

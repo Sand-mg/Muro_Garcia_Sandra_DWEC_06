@@ -1,0 +1,38 @@
+.contenedor{
+    display: grid;
+    grid-template-areas: "Ml Mc"
+                        "Mb Vr";
+    margin-left: 50px;
+}
+
+.Merlot{
+    grid-area: Ml;
+    background-image: url(img/wine-4177639_1280.jpg);
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+}
+
+.Moscato{
+    grid-area: Mc;
+    background-image: url(img/wine-428316_1280.jpg);
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+}
+
+.Malbec{
+    grid-area: Mb;
+    background-image: url(img/rose-wine-4040756_1280.jpg);
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+}
+
+.Verdejo{
+    grid-area: Vr;
+    background-image: url(img/white-wine-848268_1280.jpg);
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+}

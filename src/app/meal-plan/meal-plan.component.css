@@ -1,0 +1,45 @@
+.publico-container, .identificado-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-usuario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-usuario input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-obtener, .btn-anadir, .btn-eliminar, .btn-cerrar {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-obtener:hover, .btn-anadir:hover, .btn-eliminar:hover, .btn-cerrar:hover {
+    background-color: #0056b3;
+}
+
+.comida-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.saludo {
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,48 @@
+.receta {
+    display: flex;
+    flex-direction: row;
+}
+
+.texto{
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px black;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.instrucciones {
+    padding: 10px;
+    margin-left: 25px;
+    border: solid 2px white;
+    border-radius: 2%;
+    background-color: black;
+    opacity: 0.5;
+    position: relative;
+}
+
+.boton {
+    background-color: #a161b8;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+    transition: 0.3s; 
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.boton:hover {
+    background-color: #70328e;
+}

@@ -1,0 +1,39 @@
+<ng-container *ngIf="usuarioIdentificado; then siIdentificado else noIdentificado">
+</ng-container>
+
+<ng-template #noIdentificado>
+    <div class="publico-container">
+        <p>Identifícate para agregar algún plan a tu perfil personal</p>
+        
+        <form #formUsuario="ngForm" (ngSubmit)="onSubmit()" class="form-usuario">
+            <label for="nombreUsuario">Nombre de Usuario</label>
+            <input type="text" name="nombreUsuario" #nombreUsuario="ngModel" [(ngModel)]="this.datosUsuario.username">
+            
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="this.datosUsuario.firstName">
+            
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" #apellido="ngModel" [(ngModel)]="this.datosUsuario.lastName">
+            
+            <label for="email">Email</label>
+            <input type="text" name="email" #email="ngModel" [(ngModel)]="this.datosUsuario.email">
+            
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #siIdentificado>
+    <div class="identificado-container">
+        <p class="saludo">Hola {{this.nombreUsuario}}!</p>
+        <button (click)="obtenerMealPlan()" class="btn-obtener">Obtener Plan de Comidas</button>
+        <div *ngFor="let comida of comidas" class="comida-container">
+            <h2>{{ this.comida.title }} ID: {{this.comida.id}}</h2>
+            <p>Tiempo de preparación: {{ this.comida.readyInMinutes}} minutos</p>
+            <p><a href="{{this.comida.sourceUrl}}">Página web de la comida</a></p>
+            <button (click)="eliminarComida(comida.id)" class="btn-eliminar">Eliminar</button>
+        </div>
+        <button (click)="anadirComida()" class="btn-anadir">Añadir Comida</button>
+        <button (click)="cerrarSesion()" class="btn-cerrar">Cerrar Sesión</button>
+    </div>
+</ng-template>
